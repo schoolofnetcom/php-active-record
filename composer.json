@@ -1,0 +1,19 @@
+{
+    "name": "erikfig/active-record-orm",
+    "description": "A active record ORM",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erik Figueiredo",
+            "email": "erik.figueiredo@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ErikFig\\ActiveRecordOrm\\": "src",
+            "App\\": "app"
+        }
+    }
+}
