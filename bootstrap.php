@@ -3,8 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use ErikFig\ActiveRecordOrm\Drivers\MySql;
-use ErikFig\ActiveRecordOrm\QueryBuilder\Select;
-use ErikFig\ActiveRecordOrm\Models\Model;
+use App\Models\Users;
 
 $mysql = new MySql();
 $mysql->connect([
@@ -13,9 +12,7 @@ $mysql->connect([
     'user' => 'root',
 ]);
 
-$query = new Select('users'); 
-$data = $mysql->setQueryBuilder($query)
-    ->execute()
-    ->all();
+$user = new Users($mysql);
+$user->first(1);
 
-var_dump($data);
+var_dump($user->name);

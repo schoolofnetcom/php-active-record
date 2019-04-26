@@ -2,7 +2,8 @@
 
 namespace ErikFig\ActiveRecordOrm\Models;
 
-class Model
+abstract class Model
 {
     use EntityTrait;
+    use RepositoryTrait;
 }

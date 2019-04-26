@@ -47,7 +47,7 @@ class Mysql implements DriverInterface
     public function execute()
     {
         $this->sth = $this->pdo->prepare((string)$this->query);
-        $this->sth->execute();
+        $this->sth->execute($this->query->getValues());
         return $this;
     }
 
